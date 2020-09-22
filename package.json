@@ -1,0 +1,17 @@
+{
+  "name": "classificadoveiculos",
+  "version": "1.0.0",
+  "description": "sistema robô para integrar busca de carros pelas plataformas olx, mercadolivre e facebook ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.3",
+    "nodemailer": "^6.4.11",
+    "nodemailer-sendgrid-transport": "^0.2.0"
+  }
+}
