@@ -70,7 +70,7 @@ const coletaDados = async (pg) => {
 const gravaHtml = async (result) => {
     fs.writeFileSync('./index.html', result, {glag: 'a+'}, function(err){
         if(err){
-            console.log('Deu pau na geração de html: ' + err)
+            console.log('Deu pau na geração do html: ' + err)
         }
     })
 }
