@@ -36,7 +36,7 @@ const listaLinks = async () => {
   return dados
 }
 
-const linkFilho = 'https://sp.olx.com.br/sao-paulo-e-regiao/celulares/iphone-se-792377949'
+//const linkFilho = 'https://sp.olx.com.br/sao-paulo-e-regiao/celulares/iphone-se-792377949'
 const coletaDados = async (pg) => {
     try {
         const res = await axios.get(pg)
@@ -68,11 +68,22 @@ const coletaDados = async (pg) => {
 
 
 const gravaHtml = async (result) => {
-    fs.writeFileSync('./index.html', result, {glag: 'a+'}, function(err){
+    fs.writeFileSync('./index.html', result, {flag: 'a+'}, function(err){
         if(err){
             console.log('Deu pau na geração do html: ' + err)
         }
     })
 }
 
-coletaDados(linkFilho)
+const apresentaDados = async () => {
+    const todosLinks = await listaLinks()
+    todosLinks.map(function(linksFilhos){
+        coletaDados(linksFilhos)
+    })
+};
+
+const main = async () => {
+    await apresentaDados()
+}
+
+main()
