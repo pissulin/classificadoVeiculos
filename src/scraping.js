@@ -73,7 +73,7 @@ const gravaHtml = async (result) => {
             console.log('Deu pau na geração do html: ' + err)
         }
     })
-}
+};
 
 const apresentaDados = async () => {
     const todosLinks = await listaLinks()
