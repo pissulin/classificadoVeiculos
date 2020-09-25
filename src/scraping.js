@@ -56,7 +56,7 @@ const coletaDados = async (pg) => {
             <h3>${dataPublicacao}
             <h3>${codigo}
             <h3>${descricao}
-            <h3>Link: <a href="${pg}">Produto</a></h3>
+            <h3>Link: <a target="_blank href="${pg}">Produto</a></h3>
             <br>
             `
         gravaHtml(resultado)
